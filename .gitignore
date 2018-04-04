@@ -34,6 +34,3 @@ Procfile
 *.sublime-project
 /.idea
 *.iml
-
-# Ignore Byebug command history file.
-.byebug_history
