@@ -1,0 +1,7 @@
+modal form for new task creation
+<%= form_for @task do |f| %>
+    name: <%= f.text_field :name %><br />
+    price : <%= f.text_field :price %><br />
+    notes : <%= f.text_area :notes %><br />
+    <%= f.submit %>
+<% end %>
