@@ -1,4 +1,35 @@
 <div class="btn btn-success"><%= link_to 'add contact', new_contact_path %></div>
-<div>contact list<br>
-
+<div class="card bg-faded">contact list<br>
+  <table class="table table-sm table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Date of Birth</th>
+        <th scope="col">Email</th>
+        <th scope="col">Current Address</th>
+        <th scope="col">Property Address</th>
+        <th scope="col">Buyer/seller</th>
+        <th scope="col">Lead status</th>
+        <th scope="col">Realtor</th>
+        <th scope="col">Last Contact</th>
+        <th scope="col">Source</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @contacts.each do |contact| %>
+      <tr>
+        <th scope="row"><%= link_to "#{contact.firstname} #{contact.lastname}", contact_path(contact) %></th>
+        <td><%= contact.dob %></td>
+        <td><%= contact.email %></td>
+        <td><%= contact.curaddress %></td>
+        <td><%= contact.propaddress %></td>
+        <td><%= contact.designation %></td>
+        <td><%= contact.leadstatus %></td>
+        <td><%= contact.manager %></td>
+        <td><%= contact.lastcontact %></td>
+        <td><%= contact.source %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
 </div>
