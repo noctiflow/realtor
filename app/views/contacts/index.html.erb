@@ -6,6 +6,7 @@
         <th scope="col">Name</th>
         <th scope="col">Date of Birth</th>
         <th scope="col">Email</th>
+        <th scope="col">Phone Number</th>
         <th scope="col">Current Address</th>
         <th scope="col">Property Address</th>
         <th scope="col">Buyer/seller</th>
@@ -21,6 +22,7 @@
         <th scope="row"><%= link_to "#{contact.firstname} #{contact.lastname}", contact_path(contact) %></th>
         <td><%= contact.dob %></td>
         <td><%= contact.email %></td>
+        <td><%= contact.phone %></td>
         <td><%= contact.curaddress %></td>
         <td><%= contact.propaddress %></td>
         <td><%= contact.designation %></td>
